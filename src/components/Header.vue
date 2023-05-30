@@ -2,7 +2,7 @@
   <header ref="fixedRef" class="header">
     <div class="header__left">
       <p class="header__left-logo">Food Deliver</p>
-      <div @click="test" class="header__left-btn">
+      <div @click="switcherFunc" class="header__left-btn">
         <div class="switch-button">
           <input class="switch-button-checkbox" type="checkbox" />
           <label class="switch-button-label" for=""
@@ -30,17 +30,16 @@
 import { onMounted, ref } from "vue";
 const fixedRef = ref(null);
 
-const test = () => {
+const switcherFunc = () => {
   let checkbox = document.querySelector(".switch-button-checkbox");
   let label = document.querySelector(".switch-button-label-span");
-  let switcherBefore = document.querySelector('.switch-button')
+  let switcherBefore = document.querySelector(".switch-button");
   if (checkbox.checked) {
     label.style.color = "#404040";
-    switcherBefore.style.color="white"
+    switcherBefore.style.color = "white";
   } else {
     label.style.color = "white";
-    switcherBefore.style.color="#404040"
-
+    switcherBefore.style.color = "#404040";
   }
 };
 
