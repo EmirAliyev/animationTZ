@@ -1,0 +1,91 @@
+.cards
+   max-width: 1440px
+   width: 100%
+   padding: 70px 60px
+   display: flex
+
+.cardBefore
+   opacity: 0
+   transform: translateY(100px)
+
+.card
+   min-width: 300px
+   height: 328px
+   background: $lightGrey
+   border-radius: 8px
+   display: flex
+   flex-direction: column
+   padding: 20px 30px 25px 30px
+   font-weight: 500
+   font-family: TTTravels
+   font-size: 24px
+   line-height: 130%
+   display: flex
+   align-items: center
+   color: $black
+   justify-content: space-between
+   cursor: pointer
+   &__first.cardShow
+      animation: cardShowStart .3s ease
+      transition: .3s ease
+   &__second.cardShow
+      animation: cardShowStart .5s ease
+   &__second.cardBefore
+      transition: .5s ease
+   &__third.cardShow
+      animation: cardShowStart .8s ease
+   &__third.cardBefore
+      transition: .8s ease
+   &__fourth.cardShow
+      animation: cardShowStart 1s ease
+   &__fourth.cardBefore
+      transition: 1s ease
+   &__content
+      display: flex
+      align-items: center
+      flex-direction: column
+      &-title
+         display: flex
+         justify-content: center
+         align-items: center
+         text-align: center
+         &-first
+            width: 100px
+         &-second
+            margin-bottom: 31px
+         &-third
+            margin-bottom: 31px
+            width: 200px
+         &-fourth
+            margin-bottom: 31px
+   &:not(last-child)
+      margin-right: 40px
+   &:first-child
+      .card__title
+         width: 159px
+   &__reverse
+      display: none
+   &:hover
+      background: $purple
+      transition: 1s ease
+      .card__content
+         display: none
+      .card__reverse
+         display: flex
+         color: white
+         font-family: TTTravels
+         font-weight: 400
+         line-height: 140%
+         font-size: 16px
+
+
+
+   
+
+@keyframes cardShowStart
+   0%
+      opacity: 0
+      transform: translateY(100px)
+   100%
+      opacity: 1
+      transform: translateY(0px)

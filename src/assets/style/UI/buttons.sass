@@ -1,0 +1,52 @@
+.base-button
+   font-family: TTTravels
+   font-weight: 600
+   cursor: pointer
+   display: flex
+   justify-content: center
+   align-items: center
+   color: white
+   &-delivery__circle
+      background: $purple
+      border-radius: 50%
+      width: 195px
+      height: 195px
+      position: fixed
+      z-index: 10
+      top: 585px
+      left: 50%
+      letter-spacing: 0.03em
+      font-size: 18px
+      line-height: 130%
+      padding: 0 20px
+      text-transform: uppercase
+      animation: rotating 15s linear infinite 
+
+
+.delivery__btn-bottom
+   animation: replaceBtn 0.5s ease , rotating 15s linear infinite
+   transform: translateX(-50%)
+   top: 85%
+   border-radius: 50%
+   width:115px
+   height: 115px
+   font-size: 14px
+
+@keyframes rotating
+   from 
+      -webkit-transform:  translateX(-50%) rotate(0deg)
+  
+   to 
+      -webkit-transform:  translateX(-50%) rotate(360deg) 
+  
+@keyframes replaceBtn
+   0%
+      top: 585px
+      left: 50%
+      width: 195px
+      height: 195px
+
+   100%
+      top: 85%
+      width: 115px
+      height: 115px
